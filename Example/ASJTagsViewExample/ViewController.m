@@ -34,6 +34,8 @@
 
 - (void)setup
 {
+    self.tagsView.isEditable = true;
+    
   _tagsView.tagColorTheme = TagColorThemeStrawberry;
   [self handleTagBlocks];
   [_inputTextField becomeFirstResponder];

@@ -46,6 +46,12 @@ typedef NS_ENUM(NSInteger, TagColorTheme)
 @interface ASJTagsView : UIScrollView
 
 /**
+ * tag is editable
+ */
+@property (assign, nonatomic) Boolean isEditable;
+
+
+/**
  *  Background color of tags.
  */
 @property (nullable, strong, nonatomic) IBInspectable UIColor *tagColor;

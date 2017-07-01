@@ -305,7 +305,9 @@
 - (ASJTag *)tagView
 {
   NSString *nibName = NSStringFromClass([ASJTag class]);
-  ASJTag *tagView = (ASJTag *)[self.tagsBundle loadNibNamed:nibName owner:self options:nil][0];
+  int option = self.isEditable ? 1 : 0;
+    
+  ASJTag *tagView = (ASJTag *)[self.tagsBundle loadNibNamed:nibName owner:self options:nil][option];
   
   // use the default theme if tag color is not set
   if (!_tagColor) {
