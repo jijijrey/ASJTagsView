@@ -34,7 +34,7 @@
 
 - (void)setup
 {
-    self.tagsView.isEditable = true;
+    self.tagsView.isEditable = false;
     self.tagsView.tagColor = [UIColor clearColor];
     
   [self handleTagBlocks];
