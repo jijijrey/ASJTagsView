@@ -139,6 +139,7 @@
   _tagFont = [UIFont systemFontOfSize:15.0f];
   _cornerRadius = 4.0f;
   _tagSpacing = 8.0f;
+  _isEditable = false;
 }
 
 #pragma mark - Orientation

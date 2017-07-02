@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, TagColorTheme)
 /**
  * tag is editable
  */
-@property (assign, nonatomic) Boolean isEditable;
+@property (assign, nonatomic) IBInspectable Boolean isEditable;
 
 
 /**
