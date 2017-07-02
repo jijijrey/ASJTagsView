@@ -24,72 +24,12 @@
 #import "ASJTagsView.h"
 #import "ASJTag.h"
 
-#pragma mark - UIColor
-
-@interface UIColor (Tags)
-
-+ (UIColor *)asj_defaultColor;
-+ (UIColor *)asj_chartreuseColor;
-+ (UIColor *)asj_coolGrayColor;
-+ (UIColor *)asj_indigoColor;
-+ (UIColor *)asj_plumColor;
-+ (UIColor *)asj_raspberryColor;
-+ (UIColor *)asj_strawberryColor;
-+ (UIColor *)colorWithR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b;
-
-@end
-
-@implementation UIColor (Tags)
-
-+ (UIColor *)asj_defaultColor
-{
-  return [UIColor colorWithR:60 G:130 B:170];
-}
-
-+ (UIColor *)asj_chartreuseColor
-{
-  return [UIColor colorWithR:69 G:139 B:0];
-}
-
-+ (UIColor *)asj_coolGrayColor
-{
-  return [UIColor colorWithR:118 G:122 B:133];
-}
-
-+ (UIColor *)asj_indigoColor
-{
-  return [UIColor colorWithR:13 G:79 B:139];
-}
-
-+ (UIColor *)asj_plumColor
-{
-  return [UIColor colorWithR:139 G:102 B:139];
-}
-
-+ (UIColor *)asj_raspberryColor
-{
-  return [UIColor colorWithR:135 G:38 B:87];
-}
-
-+ (UIColor *)asj_strawberryColor
-{
-  return [UIColor colorWithR:190 G:38 B:37];
-}
-
-+ (UIColor *)colorWithR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b
-{
-  return [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1.0f];
-}
-
-@end
-
 #pragma mark - ASJTagsView
 
 @interface ASJTagsView ()
 
 @property (weak, nonatomic) ASJTag *tagView;
 @property (copy, nonatomic) NSArray *tags;
-@property (readonly, copy, nonatomic) NSArray *colors;
 @property (readonly, weak, nonatomic) NSBundle *tagsBundle;
 @property (readonly, weak, nonatomic) NSNotificationCenter *notificationCenter;
 
@@ -134,7 +74,7 @@
 - (void)setupDefaults
 {
   _tags = [[NSArray alloc] init];
-  _tagColorTheme = TagColorThemeDefault;
+  _tagColor = [UIColor clearColor];
   _tagTextColor = [UIColor whiteColor];
   _tagFont = [UIFont systemFontOfSize:15.0f];
   _cornerRadius = 4.0f;
@@ -312,7 +252,7 @@
   
   // use the default theme if tag color is not set
   if (!_tagColor) {
-    self.tagColorTheme = TagColorThemeDefault;
+      _tagColor = [UIColor clearColor];
   }
   
   tagView.backgroundColor = _tagColor;
@@ -399,59 +339,6 @@
 {
   _tagSpacing = tagSpacing;
   [self reloadTagsView];
-}
-
-- (void)setTagColorTheme:(TagColorTheme)tagColorTheme
-{
-  _tagColorTheme = tagColorTheme;
-  
-  switch (tagColorTheme)
-  {
-    case TagColorThemeDefault:
-      _tagColor = [UIColor asj_defaultColor];
-      break;
-      
-    case TagColorThemeChartreuse:
-      _tagColor = [UIColor asj_chartreuseColor];
-      break;
-      
-    case TagColorThemeCoolGray:
-      _tagColor = [UIColor asj_coolGrayColor];
-      break;
-      
-    case TagColorThemeIndigo:
-      _tagColor = [UIColor asj_indigoColor];
-      break;
-      
-    case TagColorThemePlum:
-      _tagColor = [UIColor asj_plumColor];
-      break;
-      
-    case TagColorThemeRaspberry:
-      _tagColor = [UIColor asj_raspberryColor];
-      break;
-      
-    case TagColorThemeStrawberry:
-      _tagColor = [UIColor asj_strawberryColor];
-      break;
-      
-    default:
-      break;
-  }
-  [self reloadTagsView];
-}
-
-#pragma mark - Property getter
-
-- (NSArray *)colors
-{
- return @[[UIColor asj_defaultColor],
-          [UIColor asj_chartreuseColor],
-          [UIColor asj_coolGrayColor],
-          [UIColor asj_indigoColor],
-          [UIColor asj_plumColor],
-          [UIColor asj_raspberryColor],
-          [UIColor asj_strawberryColor]];
 }
 
 @end

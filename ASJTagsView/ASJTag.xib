@@ -30,7 +30,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Xur-1V-pud" firstAttribute="leading" secondItem="op3-05-xKB" secondAttribute="leading" constant="8" id="1TK-9h-u14"/>
                 <constraint firstAttribute="trailing" secondItem="Xur-1V-pud" secondAttribute="trailing" constant="8" id="56A-mO-lTC"/>
@@ -82,7 +81,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cfm-QH-zbm" firstAttribute="leading" secondItem="GU3-78-Bdh" secondAttribute="leading" constant="8" id="Ccb-hY-eqd"/>
                 <constraint firstAttribute="bottom" secondItem="cfm-QH-zbm" secondAttribute="bottom" id="aXf-fT-9km"/>

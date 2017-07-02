@@ -29,20 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^TagBlock)(NSString *tagText, NSInteger idx);
 
-/**
- *  These are a few predefined color themes you can use instead of the 'tagColor' property. All colors except the default taken from: https://github.com/bennyguitar/Colours
- */
-typedef NS_ENUM(NSInteger, TagColorTheme)
-{
-  TagColorThemeDefault,
-  TagColorThemeChartreuse,
-  TagColorThemeCoolGray,
-  TagColorThemeIndigo,
-  TagColorThemePlum,
-  TagColorThemeRaspberry,
-  TagColorThemeStrawberry
-};
-
 @interface ASJTagsView : UIScrollView
 
 /**
@@ -90,11 +76,6 @@ typedef NS_ENUM(NSInteger, TagColorTheme)
  *  Sets the spacing between the tags and between tags and the edges.
  */
 @property (assign, nonatomic) IBInspectable CGFloat tagSpacing;
-
-/**
- *  A few predefined color themes you can use apart from setting a color of your own. Note that setting the 'tagColor' property will override any theme you have set. 'tagColor' needs to be 'nil' in order for color themes to work.
- */
-@property (assign, nonatomic) IBInspectable TagColorTheme tagColorTheme;
 
 /**
  *  A block to handle taps on the tags.

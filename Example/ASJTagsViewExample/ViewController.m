@@ -35,8 +35,8 @@
 - (void)setup
 {
     self.tagsView.isEditable = true;
+    self.tagsView.tagColor = [UIColor clearColor];
     
-  _tagsView.tagColorTheme = TagColorThemeStrawberry;
   [self handleTagBlocks];
   [_inputTextField becomeFirstResponder];
 }
@@ -76,6 +76,8 @@
 {
   [_tagsView addTag:_inputTextField.text];
   _inputTextField.text = nil;
+    
+    NSLog(@"%f", self.tagsView.contentSize.height);
 }
 
 - (IBAction)clearAllTapped:(id)sender
