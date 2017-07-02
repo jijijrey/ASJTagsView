@@ -347,6 +347,11 @@
 
 #pragma mark - Property setters
 
+- (void)setIsEditable:(Boolean)isEditable
+{
+    _isEditable = isEditable;
+}
+
 - (void)setTagColor:(UIColor *)tagColor
 {
   _tagColor = tagColor;
