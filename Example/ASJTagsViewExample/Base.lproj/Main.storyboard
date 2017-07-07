@@ -76,17 +76,14 @@
                                 </variation>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZQ-Ln-Tle" customClass="ASJTagsView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.41568627450000001" green="0.92549019610000005" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="1" constant="50" placeholder="YES" id="WIC-oO-pPK"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="en8-Rk-cii"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.85889905430000002" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OZQ-Ln-Tle" firstAttribute="top" secondItem="xgw-5Z-RuT" secondAttribute="bottom" id="8hD-hp-Bcb"/>
+                            <constraint firstItem="2Oo-zI-gHB" firstAttribute="top" secondItem="OZQ-Ln-Tle" secondAttribute="bottom" id="Dzw-Xy-cGu"/>
                             <constraint firstItem="xgw-5Z-RuT" firstAttribute="leading" secondItem="obK-cI-UHp" secondAttribute="leading" id="FOI-sm-fmb"/>
                             <constraint firstItem="OZQ-Ln-Tle" firstAttribute="leading" secondItem="obK-cI-UHp" secondAttribute="leading" id="a91-Cq-daa"/>
                             <constraint firstAttribute="trailing" secondItem="xgw-5Z-RuT" secondAttribute="trailing" id="cfx-VN-1LJ"/>
@@ -101,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkD-Kz-aR1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="435"/>
+            <point key="canvasLocation" x="316" y="434.93253373313348"/>
         </scene>
     </scenes>
 </document>

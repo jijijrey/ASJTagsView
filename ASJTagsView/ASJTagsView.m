@@ -112,7 +112,8 @@
     return;
   }
   
-  NSMutableArray *temp = _tags.mutableCopy;
+  NSMutableArray *temp = [NSMutableArray array];
+  [temp addObjectsFromArray:_tags];
   [temp addObject:tag];
   _tags = [NSArray arrayWithArray:temp];
   [self reloadTagsView];
@@ -169,7 +170,15 @@
 
 - (void)deleteAllTags
 {
-  [self empty];
+    for (id view in self.subviews)
+    {
+        if (![view isKindOfClass:[ASJTag class]]) {
+            continue;
+        }
+        [view removeFromSuperview];
+    }
+    
+    _tags = nil;
 }
 
 #pragma mark - Creation
@@ -189,7 +198,6 @@
     }
     [view removeFromSuperview];
   }
-    _tags = nil;
 }
 
 - (void)addTags
