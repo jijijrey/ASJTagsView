@@ -189,6 +189,7 @@
     }
     [view removeFromSuperview];
   }
+  _tags = nil
 }
 
 - (void)addTags
