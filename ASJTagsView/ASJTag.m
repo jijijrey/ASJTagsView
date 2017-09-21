@@ -41,6 +41,7 @@
 {
   [super awakeFromNib];
   self.crossImage = self.defaultCrossImage;
+  self.tagButton.titleLabel.font = tagFont;
 }
 
 - (UIImage *)defaultCrossImage
