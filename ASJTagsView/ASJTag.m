@@ -104,13 +104,4 @@
   [_deleteButton setImage:crossImage forState:UIControlStateNormal];
 }
 
-- (void)setTagFont:(UIFont *)tagFont
-{
-  if (!tagFont) {
-    return;
-  }
-  _tagFont = tagFont;
-  _tagButton.titleLabel.font = tagFont;
-}
-
 @end
